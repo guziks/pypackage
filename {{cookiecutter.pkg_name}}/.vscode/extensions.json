@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "hverlin.mise-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "tamasfe.even-better-toml"
+    ]
+}

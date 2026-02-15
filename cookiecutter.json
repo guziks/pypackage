@@ -1,0 +1,6 @@
+{
+    "pkg_name": "mypackage",
+    "pkg_dir": "{{ cookiecutter.pkg_name | replace('-', '_') }}",
+    "description": "A Python package",
+    "python_version": "3.14"
+}

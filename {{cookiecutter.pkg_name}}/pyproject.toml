@@ -1,0 +1,25 @@
+[project]
+name = "{{ cookiecutter.pkg_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.description }}"
+readme = "README.md"
+requires-python = ">={{ cookiecutter.python_version }}"
+dependencies = []
+
+[dependency-groups]
+dev = []
+
+[project.scripts]
+{{ cookiecutter.pkg_name }} = "{{ cookiecutter.pkg_dir }}:main"
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["{{ cookiecutter.pkg_dir }}"]
+force-single-line = false
+lines-after-imports = 2

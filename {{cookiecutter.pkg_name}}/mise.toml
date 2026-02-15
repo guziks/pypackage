@@ -1,0 +1,16 @@
+[tools]
+uv = "latest"
+
+[tasks]
+install = "uv sync"
+dev = "uv run {{ cookiecutter.pkg_name }}"
+
+fmt = "uv run ruff check --select I --fix .; uv run ruff format"
+fix = "uv run ruff check --fix ."
+lint = "uv run ruff check ."
+
+[tasks."docker:build"]
+run = "docker build -t {{ cookiecutter.pkg_name }} ."
+[tasks."docker:run"]
+run = "docker run --rm -it {{ cookiecutter.pkg_name }}"
+depends = ["docker:build"]

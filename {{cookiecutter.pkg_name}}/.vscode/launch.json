@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "{{ cookiecutter.pkg_name }}",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "{{ cookiecutter.pkg_dir }}"
+        }
+    ]
+}
